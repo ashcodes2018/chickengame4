@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="game4.css"/>
+
+    <title>Grant Chicken Game 4</title>
+</head>
+<body>
+    <main>
+      <div id="startgame">
+      <button id="startbutton">Start the Game</button>
+      </div>
+        <div id="hiddencontentofthepage">
+          <div id="gamebuttons">
+          <a href="#"><button id="attackButton">Attack</button></a>
+          <a href="#"><button id="healbutton">Heal</button></a>
+          <a href="#"><button id="quitbutton">Quit</button></a>
+      </div>
+
+      <p id="consolemsg"></p>
+
+      <h2>Player Stats</h2>
+
+      <div id="username"</div>
+
+      <div id="playerstats">
+          <p id="playerhealth">Health:</p>
+          <progress id="userhealth" value="40" max="40"></progress>
+          <p id="playerheal">Heal Count:</p>
+          <progress id="userheal" value="2" max="2"></progress>
+          <p id="playerwins">Wins:</p>
+          <progress id="userwin" value="0" max="5"></progress>
+      </div>
+
+      <h2>Enemy Stats</h2>
+      <p>Name:Grant</p>
+      <p id="granthealth">Health:</p>
+      <div id="grantsprogress">
+          <progress id="granthealth" value="0" max="10"></progress>
+      </div>
+      </div>
+    </main>
+    <script src="game4.js"></script>
+</body>
+</html>
