@@ -9,7 +9,7 @@
     var grantHealthBar=document.getElementById("granthealth");
     var nameOfThePlayer =document.getElementById("username");
     var message = document.getElementById("gamestatusmsg");
-    var hiddenPage=document.getElementById("hiddencontentofthepage");
+    var hiddenPage=document.getElementsByClassName("hiddencontentofthepage");
     var theButtons=document.getElementById("gamebuttons");
 
   var userObject={
@@ -24,10 +24,12 @@
     this.userHealth+=rand;
     this.userHealsRemaining--;
   },
-   generateAttackDamageForGrant:function(){
+   generateAttackDamageForGrant:function()
+   {
      return Math.floor((Math.random()*3)+1);
 
-  };
+  }
+};
 
     var grantObject= {
       grantName:"Grant the Mighty Chicken",
@@ -42,7 +44,7 @@
     {
         userObject.userName= prompt("Enter your name");
         nameOfThePlayer.textContent = userObject.userName
-        hiddencontentofthepage.classList.remove("hide");
+        hiddenpage.classList.remove("hiddencontentofthepage");
     };
 
   attackButton.onclick=function()
@@ -72,8 +74,6 @@
             updateMessage("Sorry you have been defeated");
             theButtons.style.display = "none";
         }
-
-
 };
 
     healButton.onclick = function()
@@ -90,12 +90,10 @@
             //theButtons.style.display = "none";
         }
     };
-
     quitButton.onclick = function()
     {
         updateMessage("Game over");
         theButtons.style.display = "none";
-
     };
   function updateDisplay()
     {
@@ -103,16 +101,9 @@
         grantHealthBar.value = grantObject.grantHealth;
         playerHealBar.value = userObject.userHealsRemaining;
         playerWinsBar.value = userObject.userWins;
-
-
     };
 
   function updateMessage(newMessage) {
         message.innerText = newMessage;
     };
-
-
-
-
-
  })();
